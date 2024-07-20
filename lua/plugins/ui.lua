@@ -5,7 +5,7 @@ return {
 			require("nvim-cursorline").setup({
 				cursorline = {
 					enable = true,
-					timeout = 1000,
+					timeout = 500,
 					number = false,
 				},
 				cursorword = {
@@ -28,7 +28,22 @@ return {
 			-- OPTIONAL:
 			--   `nvim-notify` is only needed, if you want to use the notification view.
 			--   If not available, we use `mini` as the fallback
-			"rcarriga/nvim-notify",
+			{
+				"rcarriga/nvim-notify",
+				opts = {
+					render = "minimal",
+					stages = "fade_in_slide_out",
+					timeout = 100,
+					top_down = true,
+				},
+			},
 		},
+		config = function()
+			require("noice").setup({
+				presets = {
+					lsp_doc_border = true,
+				},
+			})
+		end,
 	},
 }

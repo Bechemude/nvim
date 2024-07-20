@@ -14,8 +14,10 @@ return {
 					null_ls.builtins.diagnostics.luacheck,
 					--
 					-- js/ts
-					null_ls.builtins.formatting.prettierd,
-					null_ls.builtins.diagnostics.eslint_d,
+					null_ls.builtins.formatting.biome,
+					-- null_ls.builtins.diagnostics.biome,
+					-- null_ls.builtins.formatting.prettier,
+					-- null_ls.builtins.diagnostics.eslint,
 				},
 			})
 		end,

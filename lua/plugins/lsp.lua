@@ -32,6 +32,8 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"tsserver",
+					-- "eslint",
+					-- "biome",
 				},
 			})
 		end,
@@ -44,11 +46,13 @@ return {
 
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.tsserver.setup({ capabilities = capabilities })
-
+			-- lspconfig.eslint.setup({ capabilities = capabilities })
+			lspconfig.biome.setup({})
+			--
 			vim.keymap.set("n", "<space>cd", vim.diagnostic.open_float, { desc = "Diagnostic" })
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
-			vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
+			vim.keymap.set("n", "<space>cD", vim.diagnostic.setloclist, { desc = "Diagnostics list" })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
