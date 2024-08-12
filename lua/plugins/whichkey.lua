@@ -13,6 +13,7 @@ return {
 			c = { name = "code" },
 			g = { name = "git" },
 			d = { name = "debug" },
+			u = { name = "UI" },
 		}, { prefix = "<leader>" })
 	end,
 }

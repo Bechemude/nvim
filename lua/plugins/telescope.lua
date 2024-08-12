@@ -11,8 +11,8 @@ return {
 			vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "buffers" })
 			vim.keymap.set("n", "<leader>th", builtin.help_tags, { desc = "help tags" })
 			vim.keymap.set("n", "<leader>tD", builtin.diagnostics, { desc = "buffers diagnostics" })
-			vim.keymap.set("n", "<leader>td", ":Telescope diagnostics bufnr=0 <CR>", { desc = "diagnostics" })
-			vim.keymap.set("n", "<leader>tn", ":Telescope notify<CR>", { desc = "notifications" })
+			vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics bufnr=0 <CR>", { desc = "diagnostics" })
+			vim.keymap.set("n", "<leader>tn", "<cmd>Telescope notify<CR>", { desc = "notifications" })
 			--
 			vim.keymap.set("n", "<leader>s", builtin.lsp_document_symbols, { desc = "symbols" })
 			vim.keymap.set("n", "<leader>ts", builtin.lsp_workspace_symbols, { desc = "lsp_workspace_symbols" })

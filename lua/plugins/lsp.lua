@@ -6,6 +6,8 @@ return {
 		end,
 	},
 	{ "folke/neodev.nvim", opts = {} },
+	-- TODO: replace neodev to lazydev.nvim 'folke/lazydev.nvim'
+	-- TODO: setup for lua lsp that deleting errors
 	{
 		"hedyhli/outline.nvim",
 		lazy = true,

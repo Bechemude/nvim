@@ -36,7 +36,7 @@ return {
 				return
 			end
 			url_open.setup({})
-			vim.keymap.set("n", "gx", "<esc>:URLOpenUnderCursor<cr>", { desc = "url open under cursor" })
+			vim.keymap.set("n", "gx", "<esc><cmd>URLOpenUnderCursor<cr>", { desc = "url open under cursor" })
 		end,
 	},
 	-- Doesnt format on auto save

@@ -17,7 +17,9 @@ return {
 			cmp.setup({
 				snippet = {
 					expand = function(args)
-						require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+						local luasnip = require("luasnip")
+						luasnip.lsp_expand(args.body) -- For `luasnip` users.
+						luasnip.filetype_extend("javascriptreact", { "html" })
 					end,
 				},
 				window = {
