@@ -26,5 +26,10 @@ vim.keymap.set("n", "[b", "<cmd>bp<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "]b", "<cmd>bn<CR>", { desc = "Next buffer" })
 
 -- theme toggle
--- vim.cmd("set background=light")
--- vim.keymap.set("n", "<C-s>", ":set background=dark<CR>")
+vim.keymap.set("n", "<leader>ul", function()
+    if vim.o.background == "dark" then
+        vim.o.background = "light"
+    else
+        vim.o.background = "dark"
+    end
+end, { desc = "Toggle dark/light background" })

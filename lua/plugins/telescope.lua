@@ -6,7 +6,7 @@ return {
 		config = function()
 			local builtin = require("telescope.builtin")
 
-			vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "files" })
+			vim.keymap.set("n", "<leader><leader>", builtin.find_files, { desc = "files" })
 			vim.keymap.set("n", "<leader>tq", builtin.quickfix, { desc = "quickfix?" })
 			vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "buffers" })
 			vim.keymap.set("n", "<leader>th", builtin.help_tags, { desc = "help tags" })
@@ -22,14 +22,18 @@ return {
 				builtin.lsp_dynamic_workspace_symbols,
 				{ desc = "lsp_dynamic_workspace_symbols" }
 			)
-			vim.keymap.set("n", "<leader>tr", builtin.lsp_references, { desc = "lsp_references" })
+			vim.keymap.set("n", "gr", builtin.lsp_references, { desc = "references" })
+			vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "definitions" })
+
+			vim.keymap.set("n", "<leader>tr", builtin.resume, { desc = "last search" })
 			vim.keymap.set("n", "<leader>tc", builtin.lsp_incoming_calls, { desc = "lsp_incoming_calls" })
 			vim.keymap.set("n", "<leader>tC", builtin.lsp_outgoing_calls, { desc = "lsp_outgoing_calls" })
 
 			vim.keymap.set("n", "<leader>ti", builtin.lsp_implementations, { desc = "lsp_implementations" })
-			vim.keymap.set("n", "<leader>tf", builtin.lsp_definitions, { desc = "lsp_definitions" })
 			vim.keymap.set("n", "<leader>tt", builtin.lsp_type_definitions, { desc = "lsp_type_definitions" })
-
+			--
+			vim.keymap.set("n", "<leader>f/", "<cmd>Telescope dir live_grep<CR>", { noremap = true, silent = true })
+			vim.keymap.set("n", "<leader>ff", "<cmd>Telescope dir find_files<CR>", { noremap = true, silent = true })
 			--
 
 			vim.keymap.set("n", "<leader>/", builtin.live_grep, { desc = "grep" })
@@ -65,6 +69,19 @@ return {
 				},
 			})
 			require("telescope").load_extension("ui-select")
+		end,
+	},
+	{
+		"princejoogie/dir-telescope.nvim",
+		-- telescope.nvim is a required dependency
+		requires = { "nvim-telescope/telescope.nvim" },
+		config = function()
+			require("dir-telescope").setup({
+				-- these are the default options set
+				hidden = true,
+				no_ignore = false,
+				show_preview = true,
+			})
 		end,
 	},
 }
