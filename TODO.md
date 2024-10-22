@@ -1,4 +1,5 @@
-https://github.com/nvim-pack/nvim-spectre
+TODO: outline and alternatives in telescope
+
 
 https://github.com/Exafunction/codeium.nvim
 https://github.com/monkoose/neocodeium
