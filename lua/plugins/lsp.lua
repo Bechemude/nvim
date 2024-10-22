@@ -49,6 +49,7 @@ return {
         "eslint",
         "cssls",
         "html",
+        "emmet_ls",
       })
 
       require("mason").setup({})
@@ -59,6 +60,7 @@ return {
           "eslint",
           "cssls",
           "html",
+          "emmet_ls",
         },
         handlers = {
           lsp_zero.default_setup,
