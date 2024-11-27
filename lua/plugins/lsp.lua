@@ -46,7 +46,7 @@ return {
       lsp_zero.setup_servers({
         "lua_ls",
         "tsserver",
-        "eslint",
+        "eslint_d",
         "cssls",
         "html",
         "emmet_ls",
@@ -57,7 +57,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "tsserver",
-          "eslint",
+          "eslint_d",
           "cssls",
           "html",
           "emmet_ls",
