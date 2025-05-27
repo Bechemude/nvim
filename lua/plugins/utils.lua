@@ -2,6 +2,18 @@ return {
   {
     "nvim-pack/nvim-spectre",
     config = function()
+      require("spectre").setup({
+        replace_engine = {
+          ["sed"] = {
+            cmd = "sed",
+            args = {
+              "-i",
+              "",
+              "-E",
+            },
+          },
+        },
+      })
       vim.keymap.set("n", "<leader>st", '<cmd>lua require("spectre").toggle()<CR>', {
         desc = "Toggle Spectre",
       })

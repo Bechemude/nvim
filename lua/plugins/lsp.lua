@@ -48,8 +48,9 @@ return {
         "tsserver",
         "eslint_d",
         "cssls",
-        "html",
+        -- "html",
         "emmet_ls",
+        "svelte",
       })
 
       require("mason").setup({})
@@ -59,8 +60,9 @@ return {
           "tsserver",
           "eslint_d",
           "cssls",
-          "html",
+          -- "html",
           "emmet_ls",
+          "svelte",
         },
         handlers = {
           lsp_zero.default_setup,
