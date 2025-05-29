@@ -24,8 +24,6 @@ return {
 					"svelte",
 					"json",
 					"styled",
-					-- "clojure",
-					"sql",
 					"yaml",
 					"markdown",
 					"markdown_inline",
@@ -40,7 +38,6 @@ return {
 				incremental_selection = {
 					enable = true,
 					keymaps = {
-						-- TODO: test keymap
 						init_selection = "<leader>ii",
 						scope_incremental = "<leader>is",
 						node_incremental = "<leader>ii",

@@ -1,35 +1,37 @@
 return {
   "stevearc/conform.nvim",
-  opts = {},
-  config = function()
-    local conform = require("conform")
-
-    conform.setup({
-      formatters_by_ft = {
-        lua = { "stylua" },
-        javascript = { "prettier" },
-        typescript = { "prettier" },
-        javascriptreact = { "prettier" },
-        typescriptreact = { "prettier" },
-        css = { "prettier" },
-        scss = { "prettier" },
-        -- html = { "prettierd" },
-        -- json = { "prettierd" },
-        yaml = { "prettier" },
-        markdown = { "prettier" },
-      },
-      -- format_on_save = {
-      --   timeout_ms = 500,
-      --   lsp_fallback = true,
-      -- },
-    })
-
-    vim.keymap.set({ "n", "x" }, "<leader>cF", function()
-      conform.format({
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 500,
-      }, {desc = "Format Conform"})
-    end, { desc = "Format file or range (in visual mode)" })
-  end,
+  event = { "BufWritePre" },
+  cmd = { "ConformInfo" },
+  keys = {
+    {
+      -- Customize or remove this keymap to your liking
+      "<leader>cf",
+      function()
+        require("conform").format({ async = true })
+      end,
+      mode = "",
+      desc = "Format buffer",
+    },
+  },
+  opts = {
+    formatters_by_ft = {
+      lua = { "stylua" },
+      javascript = { "eslint_d", "prettier" },
+      typescript = { "eslint_d", "prettier" },
+      javascriptreact = { "eslint_d", "prettier" },
+      typescriptreact = { "eslint_d", "prettier" },
+      css = { "prettier" },
+      scss = { "prettier" },
+      -- html = { "prettierd" },
+      -- json = { "prettierd" },
+      yaml = { "prettier" },
+      markdown = { "prettier" },
+    },
+    -- Set default options
+    default_format_opts = {
+      lsp_format = "fallback",
+    },
+    -- Set up format-on-save
+    -- format_on_save = { timeout_ms = 500 },
+  },
 }

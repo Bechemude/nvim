@@ -15,3 +15,11 @@ local opts = {}
 
 require("options")
 require("lazy").setup("plugins")
+
+vim.lsp.enable('luals')
+
+vim.lsp.enable('eslint')
+
+vim.lsp.enable('ts_ls')
+
+

@@ -14,23 +14,25 @@ return {
       vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics bufnr=0 <CR>", { desc = "diagnostics" })
       vim.keymap.set("n", "<leader>tn", "<cmd>Telescope notify<CR>", { desc = "notifications" })
       --
-      vim.keymap.set("n", "<leader>s", builtin.lsp_document_symbols, { desc = "symbols" })
-      vim.keymap.set("n", "<leader>ts", builtin.lsp_workspace_symbols, { desc = "lsp_workspace_symbols" })
-      vim.keymap.set(
-        "n",
-        "<leader>tS",
-        builtin.lsp_dynamic_workspace_symbols,
-        { desc = "lsp_dynamic_workspace_symbols" }
-      )
+      -- vim.keymap.set("n", "<leader>s", builtin.lsp_document_symbols, { desc = "symbols" })
+      -- vim.keymap.set("n", "<leader>ts", builtin.lsp_workspace_symbols, { desc = "lsp_workspace_symbols" })
+      -- vim.keymap.set(
+      --   "n",
+      --   "<leader>tS",
+      --   builtin.lsp_dynamic_workspace_symbols,
+      --   { desc = "lsp_dynamic_workspace_symbols" }
+      -- )
+      --
+      -- TODO: all LSP features in Telescope
       vim.keymap.set("n", "gr", builtin.lsp_references, { desc = "references" })
-      vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "definitions" })
+      -- vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "definitions" })
 
       vim.keymap.set("n", "<leader>tr", builtin.resume, { desc = "last search" })
-      vim.keymap.set("n", "<leader>tc", builtin.lsp_incoming_calls, { desc = "lsp_incoming_calls" })
-      vim.keymap.set("n", "<leader>tC", builtin.lsp_outgoing_calls, { desc = "lsp_outgoing_calls" })
-
-      vim.keymap.set("n", "<leader>ti", builtin.lsp_implementations, { desc = "lsp_implementations" })
-      vim.keymap.set("n", "<leader>tt", builtin.lsp_type_definitions, { desc = "lsp_type_definitions" })
+      -- vim.keymap.set("n", "<leader>tc", builtin.lsp_incoming_calls, { desc = "lsp_incoming_calls" })
+      -- vim.keymap.set("n", "<leader>tC", builtin.lsp_outgoing_calls, { desc = "lsp_outgoing_calls" })
+      --
+      -- vim.keymap.set("n", "<leader>ti", builtin.lsp_implementations, { desc = "lsp_implementations" })
+      -- vim.keymap.set("n", "<leader>tt", builtin.lsp_type_definitions, { desc = "lsp_type_definitions" })
       --
       vim.keymap.set("n", "<leader>f/", "<cmd>Telescope dir live_grep<CR>", { noremap = true, silent = true })
       vim.keymap.set("n", "<leader>ff", "<cmd>Telescope dir find_files<CR>", { noremap = true, silent = true })

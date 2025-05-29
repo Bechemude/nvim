@@ -28,19 +28,6 @@ return {
       })
     end,
   },
-  -- TODO: clear
-  -- {
-  -- 	"Olical/conjure",
-  -- 	config = function()
-  -- 		vim.g["conjure#mapping#doc_word"] = "gk"
-  -- 	end,
-  -- },
-  {
-    "dmmulroy/ts-error-translator.nvim",
-    config = function()
-      require("ts-error-translator").setup()
-    end
-  },
   {
     "gaborvecsei/memento.nvim",
     config = function()

@@ -25,11 +25,16 @@ vim.keymap.set("n", "<leader>q", "<cmd>bp|bd #<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "[b", "<cmd>bp<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "]b", "<cmd>bn<CR>", { desc = "Next buffer" })
 
+-- LSP
+vim.keymap.set("n", "gq", "<cmd>lua vim.lsp.buf.format({async = true})<CR>", { desc = "Format buffer" })
+vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+--
+
 -- theme toggle
 vim.keymap.set("n", "<leader>ul", function()
-    if vim.o.background == "dark" then
-        vim.o.background = "light"
-    else
-        vim.o.background = "dark"
-    end
+  if vim.o.background == "dark" then
+    vim.o.background = "light"
+  else
+    vim.o.background = "dark"
+  end
 end, { desc = "Toggle dark/light background" })
