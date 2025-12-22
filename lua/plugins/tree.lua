@@ -8,5 +8,6 @@ return {
 	config = function()
 		require("nvim-tree").setup({})
 		vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "explorer" })
+		vim.keymap.set("n", "<leader>E", "<cmd>NvimTreeFindFile<CR>", { desc = "explorer" })
 	end,
 }

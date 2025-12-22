@@ -2,7 +2,12 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim", {
+      "nvim-telescope/telescope-live-grep-args.nvim",
+      -- This will not install any breaking changes.
+      -- For major updates, this must be adjusted manually.
+      version = "^1.0.0",
+    }, },
     config = function()
       local builtin = require("telescope.builtin")
 
@@ -24,8 +29,8 @@ return {
       -- )
       --
       -- TODO: all LSP features in Telescope
-      vim.keymap.set("n", "gr", builtin.lsp_references, { desc = "references" })
-      -- vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "definitions" })
+      vim.keymap.set("n", "grr", builtin.lsp_references, { desc = "references" })
+      vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "definitions" })
 
       vim.keymap.set("n", "<leader>tr", builtin.resume, { desc = "last search" })
       -- vim.keymap.set("n", "<leader>tc", builtin.lsp_incoming_calls, { desc = "lsp_incoming_calls" })
@@ -44,7 +49,9 @@ return {
       vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "status" })
       vim.keymap.set("n", "<leader>gb", builtin.git_branches, { desc = "branch" })
       --
-      require("telescope").setup({
+      local telescope = require("telescope")
+
+      telescope.setup({
         defaults = {
           file_ignore_patterns = { "node%_modules/.*" },
           hidden = true,
@@ -60,6 +67,8 @@ return {
           },
         },
       })
+
+      telescope.load_extension("live_grep_args")
     end,
   },
   {

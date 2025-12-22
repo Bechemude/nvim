@@ -10,6 +10,7 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set softtabstop=2")
+vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set nowrap")
 
@@ -24,6 +25,7 @@ vim.keymap.set("n", "<leader>ut", "<cmd>set wrap!<CR>", { desc = "toggle wrap" }
 vim.keymap.set("n", "<leader>q", "<cmd>bp|bd #<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "[b", "<cmd>bp<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "]b", "<cmd>bn<CR>", { desc = "Next buffer" })
+-- vim.keymap.set("n", "<leader>d", "<cmd>\"_d", { desc = "Delete without clipboard" })
 
 -- LSP
 vim.keymap.set("n", "gq", "<cmd>lua vim.lsp.buf.format({async = true})<CR>", { desc = "Format buffer" })
