@@ -1,4 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -16,10 +17,5 @@ local opts = {}
 require("options")
 require("lazy").setup("plugins")
 
-vim.lsp.enable('luals')
 
-vim.lsp.enable('eslint')
-
-vim.lsp.enable('ts_ls')
-
-
+vim.lsp.enable({ "luals", "html", "ts_ls", "angularls", "eslint" })

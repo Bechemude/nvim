@@ -5,7 +5,7 @@ return {
   keys = {
     {
       -- Customize or remove this keymap to your liking
-      "<leader>cf",
+      "grf",
       function()
         require("conform").format({ async = true })
       end,
@@ -16,14 +16,14 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
-      javascript = { "eslint_d", "prettier" },
-      typescript = { "eslint_d", "prettier" },
-      javascriptreact = { "eslint_d", "prettier" },
-      typescriptreact = { "eslint_d", "prettier" },
+      javascript = { "eslint", "prettier" },
+      typescript = { "eslint", "prettier" },
+      javascriptreact = { "eslint", "prettier" },
+      typescriptreact = { "eslint", "prettier" },
       css = { "prettier" },
       scss = { "prettier" },
-      -- html = { "prettierd" },
-      -- json = { "prettierd" },
+      html = { "eslint", "prettier" },
+      json = { "prettier" },
       yaml = { "prettier" },
       markdown = { "prettier" },
     },
