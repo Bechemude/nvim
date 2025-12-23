@@ -18,5 +18,15 @@ require("options")
 require("autocmd")
 require("lazy").setup("plugins")
 
-
-vim.lsp.enable({ "luals", "html", "ts_ls", "angularls", "eslint" })
+-- test tsgo instead of ts_ls
+-- try out oxlint instead of eslint
+-- vim.lsp.enable({
+--   "lua_ls",
+--   "html",
+--   "cssls",
+--   "stylelint_lsp",
+--   "emmet_ls",
+--   "tsgo",
+--   "eslint",
+--   "oxlint"
+-- })
