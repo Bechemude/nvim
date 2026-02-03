@@ -27,11 +27,6 @@ vim.keymap.set("n", "[b", "<cmd>bp<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "]b", "<cmd>bn<CR>", { desc = "Next buffer" })
 -- vim.keymap.set("n", "<leader>d", "<cmd>\"_d", { desc = "Delete without clipboard" })
 
--- LSP
-vim.keymap.set("n", "gq", "<cmd>lua vim.lsp.buf.format({async = true})<CR>", { desc = "Format buffer" })
-vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
---
-
 -- theme toggle
 vim.keymap.set("n", "<leader>ul", function()
   if vim.o.background == "dark" then
