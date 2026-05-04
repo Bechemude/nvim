@@ -1,0 +1,33 @@
+return {
+  "olimorris/codecompanion.nvim",
+  version = "^19.0.0",
+  opts = {
+    strategies = {
+      chat = {
+        adapter = "cursor",     -- или название, под которым реализован cursor-adapter в codecompanion
+        model = "cursor-default", -- или конкретная модель, если есть имена из доков
+      },
+      inline = {
+        adapter = "cursor",
+      },
+    },
+    adapters = {
+      acp = {
+        cursor = function()
+          return require("codecompanion.adapters").extend("cursor", {
+            -- опции, если есть особенности команды/портов:
+            -- cmd = "cursor-cli",  -- или как у тебя называется
+            -- port = 1234,          -- если Cursor запускается через порт
+          })
+        end,
+      },
+    },
+    opts = {
+      log_level = "DEBUG", -- для отладки, если что‑то не подцепится
+    },
+  },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+  },
+}
