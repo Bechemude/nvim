@@ -29,5 +29,6 @@ vim.lsp.enable({
   "ts_ls",
   "eslint",
   "oxlint",
-  "vue_ls"
+  "vue_ls",
+  "gopls"
 })

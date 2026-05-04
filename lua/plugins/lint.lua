@@ -11,6 +11,7 @@ return {
       css = { 'stylelint' },
       scss = { 'stylelint' },
       svelte = { 'eslint' },
+      go = { 'golangcilint' },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })

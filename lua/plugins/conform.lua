@@ -23,9 +23,10 @@ return {
       css = { "prettier" },
       scss = { "prettier" },
       html = { "eslint", "prettier" },
-      json = { "prettier" },
+      json = { "eslint", "prettier" },
       yaml = { "prettier" },
       markdown = { "prettier" },
+      go = { "goimports", "gofumpt" },
     },
     -- Set default options
     default_format_opts = {
