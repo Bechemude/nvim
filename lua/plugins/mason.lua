@@ -1,9 +1,7 @@
 return {
   {
     "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end,
+    opts = {},
   },
 
   {
@@ -21,10 +19,6 @@ return {
         "gopls",
       },
     },
-    dependencies = {
-      { "williamboman/mason.nvim", opts = {} },
-      "neovim/nvim-lspconfig",
-    },
   },
 
   {
@@ -39,6 +33,9 @@ return {
         "goimports",
         "golangci-lint",
       },
+      auto_update = true,
+      run_on_start = true,
+      start_delay = 3000, -- Delay to let everything settle
     },
   },
 }

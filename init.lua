@@ -16,6 +16,10 @@ local opts = {}
 
 require("options")
 require("autocmd")
+
+-- Prepend mason bin to PATH
+vim.env.PATH = vim.fn.stdpath("data") .. "/mason/bin:" .. vim.env.PATH
+
 require("lazy").setup("plugins")
 
 -- test tsgo instead of ts_ls
