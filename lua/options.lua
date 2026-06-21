@@ -6,6 +6,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
 vim.opt.cursorline = true
 
+vim.cmd("syntax off")
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set shiftwidth=2")
@@ -13,6 +14,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set nowrap")
+vim.opt.fillchars:append({ eob = " " })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
@@ -21,7 +23,7 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>") -- doesn't work in zellij
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>")
-vim.keymap.set("n", "<leader>ut", "<cmd>set wrap!<CR>", { desc = "toggle wrap" })
+vim.keymap.set("n", "<leader>ut", "<cmd>set wrap! linebreak!<CR>", { desc = "toggle wrap & linebreak" })
 vim.keymap.set("n", "<leader>q", "<cmd>bp|bd #<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "[b", "<cmd>bp<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "]b", "<cmd>bn<CR>", { desc = "Next buffer" })

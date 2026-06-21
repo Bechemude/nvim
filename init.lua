@@ -20,6 +20,12 @@ require("autocmd")
 -- Prepend mason bin to PATH
 vim.env.PATH = vim.fn.stdpath("data") .. "/mason/bin:" .. vim.env.PATH
 
+vim.api.nvim_create_autocmd({ "ColorScheme", "VimEnter" }, {
+    callback = function()
+        vim.api.nvim_set_hl(0, "@markup.strikethrough", { strikethrough = true })
+    end,
+})
+
 require("lazy").setup("plugins")
 
 -- test tsgo instead of ts_ls
@@ -36,3 +42,4 @@ vim.lsp.enable({
   "vue_ls",
   "gopls"
 })
+
