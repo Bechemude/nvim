@@ -27,6 +27,7 @@ return {
       yaml = { "prettier" },
       markdown = { "prettier" },
       go = { "goimports", "gofumpt" },
+      python = { "ruff_format" },
     },
     -- Set default options
     default_format_opts = {

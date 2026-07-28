@@ -26,6 +26,7 @@ return {
       "gomod",
       "gosum",
       "gowork",
+      "python",
     }
 
     require("nvim-treesitter").install(parsers)
