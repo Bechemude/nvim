@@ -4,15 +4,16 @@ return {
     local lint = require('lint')
 
     lint.linters_by_ft = {
-      javascript = { 'eslint' },
-      typescript = { 'eslint' },
-      javascriptreact = { 'eslint' },
-      typescriptreact = { 'eslint' },
+      javascript = { 'oxlint' },
+      typescript = { 'oxlint' },
+      javascriptreact = { 'oxlint' },
+      typescriptreact = { 'oxlint' },
       css = { 'stylelint' },
       scss = { 'stylelint' },
-      svelte = { 'eslint' },
+      svelte = { 'oxlint' },
       go = { 'golangcilint' },
       python = { 'ruff' },
+      kotlin = { 'ktlint' },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })

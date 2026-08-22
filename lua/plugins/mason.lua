@@ -14,7 +14,7 @@ return {
         "stylelint_lsp",
         "emmet_ls",
         "ts_ls",
-        "eslint",
+        "oxlint",
         "vue_ls",
         "gopls",
         "pyright",
@@ -28,8 +28,8 @@ return {
     opts = {
       ensure_installed = {
         "stylua",
-        "eslint_d",
-        "prettier",
+        "oxlint",
+        "oxfmt",
         "stylelint",
         "gofumpt",
         "goimports",

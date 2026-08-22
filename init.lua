@@ -29,7 +29,6 @@ vim.api.nvim_create_autocmd({ "ColorScheme", "VimEnter" }, {
 require("lazy").setup("plugins")
 
 -- test tsgo instead of ts_ls
--- try out oxlint instead of eslint
 vim.lsp.enable({
   "lua_ls",
   "html",
@@ -37,7 +36,6 @@ vim.lsp.enable({
   "stylelint_lsp",
   "emmet_ls",
   "ts_ls",
-  "eslint",
   "oxlint",
   "vue_ls",
   "gopls",
