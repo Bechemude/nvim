@@ -5,6 +5,7 @@ vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
 vim.opt.cursorline = true
+vim.opt.conceallevel = 1
 
 vim.cmd("syntax off")
 vim.cmd("set expandtab")
