@@ -28,6 +28,7 @@ return {
       markdown = { "prettier" },
       go = { "goimports", "gofumpt" },
       python = { "ruff_format" },
+      kotlin = { "ktlint" },
     },
     -- Set default options
     default_format_opts = {

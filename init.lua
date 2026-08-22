@@ -41,6 +41,6 @@ vim.lsp.enable({
   "oxlint",
   "vue_ls",
   "gopls",
-  "pyright"
+  "pyright",
+  "kotlin_lsp",
 })
-

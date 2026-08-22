@@ -27,6 +27,7 @@ return {
       "gosum",
       "gowork",
       "python",
+      "kotlin",
     }
 
     require("nvim-treesitter").install(parsers)
