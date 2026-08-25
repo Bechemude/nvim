@@ -38,3 +38,10 @@ vim.keymap.set("n", "<leader>ul", function()
     vim.o.background = "dark"
   end
 end, { desc = "Toggle dark/light background" })
+
+-- Отключаем вставку по средней кнопке мыши во всех основных режимах
+vim.keymap.set({'n', 'v', 'i', 'c'}, '<MiddleMouse>', '<Nop>', { silent = true })
+vim.keymap.set({'n', 'v', 'i', 'c'}, '<2-MiddleMouse>', '<Nop>', { silent = true })
+vim.keymap.set({'n', 'v', 'i', 'c'}, '<3-MiddleMouse>', '<Nop>', { silent = true })
+vim.keymap.set({'n', 'v', 'i', 'c'}, '<4-MiddleMouse>', '<Nop>', { silent = true })
+
