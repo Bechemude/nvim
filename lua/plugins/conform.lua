@@ -29,6 +29,7 @@ return {
       go = { "goimports", "gofumpt" },
       python = { "ruff_format" },
       kotlin = { "ktlint" },
+      astro = { "prettier" },
     },
     -- Set default options
     default_format_opts = {

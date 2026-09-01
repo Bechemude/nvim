@@ -14,6 +14,7 @@ return {
       go = { 'golangcilint' },
       python = { 'ruff' },
       kotlin = { 'ktlint' },
+      astro = { 'oxlint' },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })

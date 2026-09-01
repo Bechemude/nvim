@@ -41,4 +41,5 @@ vim.lsp.enable({
   "gopls",
   "pyright",
   "kotlin_lsp",
+  "astro_ls",
 })

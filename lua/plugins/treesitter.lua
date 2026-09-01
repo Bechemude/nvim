@@ -28,6 +28,7 @@ return {
       "gowork",
       "python",
       "kotlin",
+      "astro",
     }
 
     require("nvim-treesitter").install(parsers)
