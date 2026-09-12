@@ -17,6 +17,7 @@ return {
     wk.add({
       {
         { "<leader>c", group = "code" },
+        { "<leader>cc", desc = "CodeCompanion toggle" },
         { "<leader>d", group = "debug" },
         { "<leader>g", group = "git" },
         { "<leader>t", group = "telescope" },
